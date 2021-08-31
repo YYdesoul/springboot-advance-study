@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    #?serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  # config-location: classpath:mybatis/mybatis-config.xml # 用于配置核心配置文件
+  mapper-locations: classpath:mybatis/mapper/*.xml # 配置mapper的位置，相当于以前Mybatis中的的mappers
+  type-aliases-package: com.soul.pojo # 配置别名
